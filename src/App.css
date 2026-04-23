@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  text-align: center;
+  color: #667085;
+}
+
+.controls,
+.infoCard,
+.bars {
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+}
+
+.controls,
+.infoCard {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.controls {
+  display: grid;
+  gap: 14px;
+}
+
+.controls label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.controls select,
+.controls input {
+  width: 100%;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #1570ef;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  background: #98a2b3;
+  cursor: not-allowed;
+}
+
+.infoCard h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.infoCard p {
+  margin: 6px 0;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 420px;
+  padding: 16px;
+}
+
+.barWrap {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  background: #36bffa;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.12s linear, background 0.12s linear;
+}
+
+.bar.active {
+  background: #f97066;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 14px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .bars {
+    height: 300px;
+    gap: 4px;
+    padding: 10px;
+  }
+}
